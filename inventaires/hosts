@@ -1,0 +1,5 @@
+[debian]
+debian_cible ansible_host=192.168.0.47
+
+[centos]
+centos_cible ansible_host=192.168.0.6
