@@ -1,0 +1,9 @@
+---
+- name: Notre premier playbook de copie
+  hosts: all
+
+  tasks:
+  - name: Copie du fichier data.txt
+    copy:
+      src: data.txt
+      dest: /tmp
