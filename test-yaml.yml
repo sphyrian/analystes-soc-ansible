@@ -1,0 +1,25 @@
+# Variable scalaire
+nom: valeur
+
+# Liste
+stagiaires:
+  - éric
+  - marianne
+  - mathieu
+
+# Tableau associatif
+formation:
+  intitulé: Découverte Ansible
+  durée: 5 jours
+  lieu: partout
+  début: 2021-01-25
+
+# Liste de tableaux associatifs
+
+stagiaires2:
+  - prenom: marianne
+    nom: lac
+  - prenom: kévin
+    nom: azéma
+  - prenom: quentin
+    nom: zettor
