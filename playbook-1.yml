@@ -1,5 +1,5 @@
 ---
-- name: Notre premier playbook de copie
+- name: Premier acte de notre premier playbook de copie
   hosts: all
 
   tasks:
