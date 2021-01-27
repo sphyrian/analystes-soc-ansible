@@ -1,0 +1,11 @@
+---
+- name: Création du compte bob sur les machines cibles
+  hosts: all
+  become: yes
+  become_user: root
+
+  tasks:
+    - name: Création du compte bob
+      user:
+        name: bob
+        state: present
