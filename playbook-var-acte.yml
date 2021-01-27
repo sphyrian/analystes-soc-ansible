@@ -1,0 +1,11 @@
+---
+- name: Illustration des variables au sein d'un playbook
+  hosts: all
+
+  vars:
+    formation: Découverte d'Ansible
+
+  tasks:
+  - name: Affichage de la variable 'formation'
+    debug:
+      msg: "Formation: {{ formation }}"
