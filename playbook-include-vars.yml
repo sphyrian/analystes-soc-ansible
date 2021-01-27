@@ -1,0 +1,16 @@
+---
+- name: Inclusion de variables
+  hosts: all
+
+  tasks:
+  - name: Inclusion du fichier 2021-04.yml
+    include_vars:
+      file: 2021-04.yml
+
+  - name: Affichage de la variable 'formation'
+    debug:
+      msg: "Formation: {{ formation }}"
+
+  - name: Affichage de la variable 'lieu'
+    debug:
+      msg: "Lieu {{ lieu }}"
