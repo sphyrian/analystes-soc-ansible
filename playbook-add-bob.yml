@@ -5,7 +5,13 @@
   become_user: root
 
   tasks:
+    - name: Création du groupe admin
+      group:
+        name: admin
+        state: present
+
     - name: Création du compte bob
       user:
         name: bob
+        groups: ["admin"]
         state: present
