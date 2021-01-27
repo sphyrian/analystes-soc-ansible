@@ -26,6 +26,13 @@
       src: index.html
       dest: "{{ apache_html_files }}"
 
+  - name: Désactivation et arrêt du firewall sur les cibles CentOS
+    systemd:
+      name: firewalld
+      state: stopped
+      enabled: no
+    when: ansible_distribution == "CentOS"
+
   handlers:
   - name: Redémarrage du service Apache pour prise en compte des modifs de config.
     systemd:
