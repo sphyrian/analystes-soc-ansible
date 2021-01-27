@@ -1,0 +1,20 @@
+---
+- name: Acte-I
+  hosts: all
+  tasks:
+  - name: Task-I/Acte-I
+    debug:
+      msg: "Coucou-1"
+  - name: Task-II/Acte-I
+    debug:
+      msg: "Coucou-2"
+
+- name: Acte-II
+  hosts: all
+  tasks:
+  - name: Task-I/Acte-II
+    debug:
+      msg: "Coucou-1"
+  - name: Task-II/Acte-II
+    debug:
+      msg: "Coucou-2"
