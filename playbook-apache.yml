@@ -13,3 +13,14 @@
       name: "{{ apache_service_name }}"
       state: started
       enabled: yes
+
+  - name: Modification du port d'écoute
+    lineinfile:
+      dest: "{{ apache_port_file }}"
+      regex: ^Listen
+      line: "Listen {{ apache_listen_port }}"
+
+  - name: Redémarrage du service Apache pour prise en compte des modifs de config.
+    systemd:
+      name: "{{ apache_service_name }}"
+      state: restarted
