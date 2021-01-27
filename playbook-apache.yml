@@ -19,8 +19,11 @@
       dest: "{{ apache_port_file }}"
       regex: ^Listen
       line: "Listen {{ apache_listen_port }}"
+    notify: restart_apache
 
+  handlers:
   - name: Redémarrage du service Apache pour prise en compte des modifs de config.
     systemd:
       name: "{{ apache_service_name }}"
       state: restarted
+    listen: restart_apache
