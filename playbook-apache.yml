@@ -1,0 +1,15 @@
+---
+- name: Installation/configuration du serveur Apache
+  hosts: all
+
+  tasks:
+  - name: Installation du package apache2
+    package:
+      name: "{{ apache_package_name }}"
+      state: present
+
+  - name: Activation et démarrage du service apache
+    systemd:
+      name: "{{ apache_service_name }}"
+      state: started
+      enabled: yes
