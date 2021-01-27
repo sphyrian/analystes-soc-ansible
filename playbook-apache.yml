@@ -21,6 +21,11 @@
       line: "Listen {{ apache_listen_port }}"
     notify: restart_apache
 
+  - name: Recopie du fichier index.html
+    copy:
+      src: index.html
+      dest: "{{ apache_html_files }}"
+
   handlers:
   - name: Redémarrage du service Apache pour prise en compte des modifs de config.
     systemd:

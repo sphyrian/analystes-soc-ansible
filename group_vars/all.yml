@@ -1,1 +1,2 @@
-apache_listen_port: 81
+apache_listen_port: 80
+apache_html_files: /var/www/html
