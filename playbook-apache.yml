@@ -25,6 +25,7 @@
     copy:
       src: index.html
       dest: "{{ apache_html_files }}"
+    tags: never
 
   - name: Désactivation et arrêt du firewall sur les cibles CentOS
     systemd:
