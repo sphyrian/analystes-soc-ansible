@@ -1,0 +1,7 @@
+---
+- name: Installation de MariaDB à partir du rôle geerlingguy
+  hosts: all
+
+  roles:
+    - name: Rôle de Geerlingguy
+      role: geerlingguy.mysql
