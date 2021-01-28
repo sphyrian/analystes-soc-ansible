@@ -5,5 +5,5 @@
   roles:
     - name: Rôle de Geerlingguy
       role: geerlingguy.mysql
-        vars:
-          mysql_python_package_debian: python-mysqldb
+      vars:
+        mysql_python_package_debian: python-mysqldb
