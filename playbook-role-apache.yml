@@ -1,0 +1,9 @@
+---
+- name: Utilisation du rôle Apache
+  hosts: all
+
+  roles:
+  - role: ansible-apache-role
+    vars:
+      apache_listen_port: 81
+

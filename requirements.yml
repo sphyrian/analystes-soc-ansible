@@ -1,0 +1,4 @@
+---
+- name: ansible-apache-role
+  src: https://github.com/sphyrian/ansible-apache-role.git
+  scm: git
