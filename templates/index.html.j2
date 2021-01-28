@@ -20,7 +20,7 @@
   <thead><td>Prénom</td><td>Nom</td></thead>
   {# Boucle sur la liste stagiaires #}
   {% for i in stagiaires %}
-    <tr><td>{{ i.prenom }}</td><td>{{ i.nom }}</td></tr>
+    <tr><td>{{ i.prenom }}</td><td>{{ i.nom|upper }}</td></tr>
   {% endfor %}
   </table>
   </body>
