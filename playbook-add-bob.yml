@@ -2,6 +2,10 @@
 - name: Création du compte bob sur les machines cibles
   hosts: all
 
+  vars_prompt:
+    - name: "bob_password"
+      prompt: "Mot de passe pour bob: "
+
   tasks:
     - name: Création du groupe admin
       group:
@@ -13,3 +17,8 @@
         name: bob
         groups: ["admin"]
         state: present
+        password: "{{ bob_password | password_hash('sha512') }}"
+
+    - name: Forcer la saisie d'un mot de passe à la première connexion
+      shell:
+        cmd: chage -d 0 bob
