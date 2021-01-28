@@ -27,6 +27,11 @@
       dest: "{{ apache_html_files }}"
     tags: never
 
+  - name: Recopie du fichier styles.css
+    copy:
+      src: styles.css
+      dest: "{{ apache_html_files }}"
+
   - name: Recopie du template index.html.j2
     template:
       src: index.html.j2

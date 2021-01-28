@@ -1,2 +1,30 @@
 apache_listen_port: 80
 apache_html_files: /var/www/html
+
+stagiaires:
+  - prenom: Kevin
+    nom: Azema
+  - prenom: Dominique
+    nom: Donet
+  - prenom: Enzo
+    nom: Rosario
+  - prenom: Olivier
+    nom: Vielmas
+  - prenom: Chancelin
+    nom: Kegba
+  - prenom: Marianne
+    nom: Lac
+  - prenom: Eric
+    nom: Leroux
+  - prenom: Mathieu
+    nom: Rieunier
+  - prenom: Sofien
+    nom: Hammami
+  - prenom: Martin
+    nom: Hugues
+  - prenom: Haroun
+    nom: Marbouh
+  - prenom: Jérôme
+    nom: Castaings
+  - prenom: Quentin
+    nom: Zetto
